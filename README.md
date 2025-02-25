@@ -102,11 +102,11 @@
 ### 결과
 
 #### DAGs
-![DAGs result](image.png)
+![DAGs result](img/dags-result.png)
 
-![weather result](image-2.png)
+![weather result](img/weather-result.png)
 
-![weather_forecast result](image-1.png)
+![weather_forecast result](img/weather_forecast-result.png)
 
 <hr/>
 
