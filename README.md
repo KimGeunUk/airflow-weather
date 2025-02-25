@@ -104,10 +104,10 @@
 #### DAGs
 ![DAGs result](img/dags-result.png)
 
-#### weather table
+#### Weather table
 ![weather result](img/weather-result.png)
 
-#### weather forecast table
+#### Weather forecast table
 ![weather_forecast result](img/weather_forecast-result.png)
 
 <hr/>
