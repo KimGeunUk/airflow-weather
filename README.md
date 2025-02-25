@@ -1,4 +1,4 @@
-## Weather &amp; Weather Forecast Data Pipeline With Apache Airflow
+## Weather &amp; Weather Forecast Data Pipeline With Apache Airflow 🌤️
 
 이 프로젝트는 Apache Airflow를 활용하여 기상청의 날씨, 날씨 예보 데이터를 일정 간격으로 자동 수집하고,
 수집한 데이터를 PostgreSQL DB에 저장·관리하는 파이프라인을 구현한 예시입니다.
@@ -96,6 +96,17 @@
         - 날씨 예보보 테이블에 Insert
     - `main()`:
         - DB 연결, 누락 날짜 조회, 데이터 수집 및 DB 저장
+
+<hr/>
+
+### 결과
+
+#### DAGs
+![DAGs result](image.png)
+
+![weather result](image-2.png)
+
+![weather_forecast result](image-1.png)
 
 <hr/>
 
