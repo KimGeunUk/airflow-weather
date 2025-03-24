@@ -6,8 +6,8 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-FILE_PATH = os.path.abspath(__file__); print(f'FILE_PATH : {FILE_PATH}')
-PROJECT_PATH = os.path.dirname(FILE_PATH); print(f'PROJECT_PATH : {PROJECT_PATH}')
+FILE_PATH = os.path.abspath(__file__)
+PROJECT_PATH = os.path.dirname(FILE_PATH)
 sys.path.append(PROJECT_PATH)
 
 from update_weather_forecast import main
@@ -16,7 +16,7 @@ local_tz = pendulum.timezone("Asia/Seoul")
 
 default_args = {
     'owner': 'User',
-    'start_date': datetime(2024, 12, 30, tzinfo=local_tz),
+    'start_date': datetime(2024, 12, 31, tzinfo=local_tz),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 2
@@ -29,8 +29,10 @@ dag = DAG(
     catchup=False
 )
 
-process_task = PythonOperator(
+task = PythonOperator(
     task_id='update_weather_forecast',
     python_callable=main,
     dag=dag
 )
+
+task
